@@ -2,32 +2,49 @@ import React from 'react';
 import CardComponent from './card/card.jsx';
 import './cards.scss';
 
-import hats from '../images/homepage/cards/hats.jpg';
-import jackets from '../images/homepage/cards/jackets.jpg';
-import sneakers from '../images/homepage/cards/sneakers.jpg';
-import women from '../images/homepage/cards/women.jpg';
-import men from '../images/homepage/cards/men.jpg';
+class Cards extends React.Component {
+    constructor() {
+        super();
 
-function Cards() {
-    return (
-        <div className="cards-container">
-            <div className='hats-card'>
-                <CardComponent src={hats} title="hats" text="shop now" />
+        this.state = {
+            categories: [
+                {
+                    name: 'hats',
+                    imgSrc: '../images/homepage/cards/hats.jpg'
+                },
+                {
+                    name: 'jackets',
+                    imgSrc: '../images/homepage/cards/jackets.jpg'
+                },
+                {
+                    name: 'sneakers',
+                    imgSrc: '../images/homepage/cards/sneakers.jpg'
+                },
+                {
+                    name: 'women',
+                    imgSrc: '../images/homepage/cards/women.jpg'
+                },
+                {
+                    name: 'men',
+                    imgSrc: '../images/homepage/cards/men.jpg'
+                }
+            ]
+        }
+    }
+
+    render() {
+        return (
+            <div className="cards-container">
+                {this.state.categories.map(({ name, imgSrc }, index) => {
+                    return (
+                        <div className={name + '-card'}>
+                            <CardComponent key={index} src={imgSrc} title={name} text="shop now" />
+                        </div>
+                    )
+                })}
             </div>
-            <div className="jackets-card">
-                <CardComponent src={jackets} title="jackets" text="shop now" />
-            </div>
-            <div className="sneakers-card">
-                <CardComponent src={sneakers} title="sneakers" text="shop now" />
-            </div>
-            <div className="women-card">
-                <CardComponent src={women} title="women" text="shop now" />
-            </div>
-            <div className="men-card">
-                <CardComponent src={men} title="men" text="shop now" />
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default Cards;

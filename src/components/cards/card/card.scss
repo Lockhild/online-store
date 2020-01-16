@@ -28,6 +28,12 @@
         .text {
             font-size: 1.5em;
             font-weight: 600;
+            transition: all .3s;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
         }
     }
 }
