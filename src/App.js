@@ -2,73 +2,12 @@ import React from 'react';
 import './App.scss';
 import { Switch, Route } from 'react-router-dom';
 
-import HomePage from './pages/homepage.jsx'
-
-const HatsPage = () => (
-  <div>
-    <ul class="uk-breadcrumb">
-      <li><a href="/">Home</a></li>
-      <li><a href="/hats">Hats</a></li>
-      <li><a href="/jackets">Jackets</a></li>
-      <li><a href="/sneakers">Sneakers</a></li>
-      <li><a href="/women">Women</a></li>
-      <li><a href="/men">Men</a></li>
-    </ul>
-    <h1>Hats Page</h1>
-  </div>
-);
-const JacketsPage = () => (
-  <div>
-    <ul class="uk-breadcrumb">
-      <li><a href="/">Home</a></li>
-      <li><a href="/hats">Hats</a></li>
-      <li><a href="/jackets">Jackets</a></li>
-      <li><a href="/sneakers">Sneakers</a></li>
-      <li><a href="/women">Women</a></li>
-      <li><a href="/men">Men</a></li>
-    </ul>
-    <h1>Jackets Page</h1>
-  </div>
-);
-const SneakersPage = () => (
-  <div>
-    <ul class="uk-breadcrumb">
-      <li><a href="/">Home</a></li>
-      <li><a href="/hats">Hats</a></li>
-      <li><a href="/jackets">Jackets</a></li>
-      <li><a href="/sneakers">Sneakers</a></li>
-      <li><a href="/women">Women</a></li>
-      <li><a href="/men">Men</a></li>
-    </ul>
-    <h1>Sneakers Page</h1>
-  </div>
-);
-const WomenPage = () => (
-  <div>
-    <ul class="uk-breadcrumb">
-      <li><a href="/">Home</a></li>
-      <li><a href="/hats">Hats</a></li>
-      <li><a href="/jackets">Jackets</a></li>
-      <li><a href="/sneakers">Sneakers</a></li>
-      <li><a href="/women">Women</a></li>
-      <li><a href="/men">Men</a></li>
-    </ul>
-    <h1>Women Page</h1>
-  </div>
-);
-const MenPage = () => (
-  <div>
-    <ul class="uk-breadcrumb">
-      <li><a href="/">Home</a></li>
-      <li><a href="/hats">Hats</a></li>
-      <li><a href="/jackets">Jackets</a></li>
-      <li><a href="/sneakers">Sneakers</a></li>
-      <li><a href="/women">Women</a></li>
-      <li><a href="/men">Men</a></li>
-    </ul>
-    <h1>Men Page</h1>
-  </div>
-);
+import HomePage from './pages/home-page.jsx';
+import HatsPage from './pages/hats-page.jsx';
+import JacketsPage from './pages/jackets-page.jsx';
+import SneakersPage from './pages/sneakers-page.jsx';
+import WomenPage from './pages/women-page.jsx';
+import MenPage from './pages/men-page.jsx';
 
 function App() {
   return (
