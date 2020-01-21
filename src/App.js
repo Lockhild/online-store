@@ -8,6 +8,7 @@ import JacketsPage from './pages/jackets-page.jsx';
 import SneakersPage from './pages/sneakers-page.jsx';
 import WomenPage from './pages/women-page.jsx';
 import MenPage from './pages/men-page.jsx';
+import ShopPage from './pages/shop-page.jsx';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/sneakers' component={SneakersPage} />
         <Route exact path='/women' component={WomenPage} />
         <Route exact path='/men' component={MenPage} />
+        <Route exact path='/shop' component={ShopPage} />
       </Switch>
     </div>
   );

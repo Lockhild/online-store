@@ -1,12 +1,19 @@
 import React from 'react';
-import ProductPreview from '../components/products/product-preview';
-// import SHOP_DATA from 'data/json/shop.data.js';
+import CollectionRow from '../components/collections/collection-row/collection-row.jsx';
+
+import SHOP_DATA from '../data/shop.data.js';
 
 
 function ShopPage() {
     return (
         <div>
-            <ProductPreview />
+            {
+                SHOP_DATA.map((section, index) => {
+                    return (
+                        <CollectionRow key={index} title={section.title} products={section.items} />
+                    )
+                })
+            }
         </div>
     )
 }

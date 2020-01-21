@@ -13,6 +13,7 @@ function Navigation() {
                     <Nav.Link href="/sneakers">Sneakers</Nav.Link>
                     <Nav.Link href="/women">Women</Nav.Link>
                     <Nav.Link href="/men">Men</Nav.Link>
+                    <Nav.Link href="/shop">Shop</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar >

@@ -1,17 +1,20 @@
 import React from 'react';
-import './product-preview';
+import './product-preview.scss';
 
 
-function ProductPreview({ imgUrl, title }) {
+function ProductPreview({ imageUrl, name }) {
     return (
-        <div className='product-preview'>
-            <div className="img" style={{ backgroundImage: 'url(' + imgUrl + ')' }}>
-
-                <button className='add-to-cart-btn'>Add to cart</button>
+        <div className='product-preview uk-card uk-card-default'>
+            <div className="uk-card-media-top">
+                <img src={imageUrl} alt="product-preview" />
             </div>
-            <p className='product-title'>{title}</p>
-        </div >
+            <div className="uk-card-body">
+                <h3 className="uk-card-title">{name}</h3>
+            </div>
+        </div>
     )
+
+
 }
 
 export default ProductPreview;
