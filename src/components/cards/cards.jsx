@@ -1,6 +1,12 @@
 import React from 'react';
 import CardComponent from './card/card.jsx';
 import './cards.scss';
+// Cateogory images
+import hatsImg from '../images/homepage/cards/hats.jpg';
+import jacketsImg from '../images/homepage/cards/jackets.jpg';
+import sneakersImg from '../images/homepage/cards/sneakers.jpg';
+import womenImg from '../images/homepage/cards/women.jpg';
+import menImg from '../images/homepage/cards/men.jpg';
 
 class Cards extends React.Component {
     constructor() {
@@ -10,23 +16,23 @@ class Cards extends React.Component {
             categories: [
                 {
                     name: 'hats',
-                    imgSrc: '../images/homepage/cards/hats.jpg'
+                    imgSrc: hatsImg
                 },
                 {
                     name: 'jackets',
-                    imgSrc: '../images/homepage/cards/jackets.jpg'
+                    imgSrc: jacketsImg
                 },
                 {
                     name: 'sneakers',
-                    imgSrc: '../images/homepage/cards/sneakers.jpg'
+                    imgSrc: sneakersImg
                 },
                 {
                     name: 'women',
-                    imgSrc: '../images/homepage/cards/women.jpg'
+                    imgSrc: womenImg
                 },
                 {
                     name: 'men',
-                    imgSrc: '../images/homepage/cards/men.jpg'
+                    imgSrc: menImg
                 }
             ]
         }
