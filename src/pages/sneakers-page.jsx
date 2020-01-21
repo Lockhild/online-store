@@ -5,11 +5,10 @@ function SneakersPage() {
     return (
         <div>
             <Navigation />
-            <hr />
             <div className="uk-container">
                 <h1>Sneakers Page</h1>
             </div>
-        </div>
+        </div >
     )
 }
 

@@ -7,7 +7,6 @@ function HomePage() {
     return (
         <div>
             <Navigation />
-            <hr />
             <div className="uk-container">
                 <Cards />
             </div>

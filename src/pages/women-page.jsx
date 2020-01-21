@@ -5,7 +5,6 @@ function WomenPage() {
     return (
         <div>
             <Navigation />
-            <hr />
             <div className="uk-container">
                 <h1>Women Page</h1>
             </div>

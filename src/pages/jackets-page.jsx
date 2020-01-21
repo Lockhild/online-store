@@ -5,7 +5,6 @@ function JacketsPage() {
     return (
         <div>
             <Navigation />
-            <hr />
             <div className="uk-container">
                 <h1>Jackets Page</h1>
             </div>
