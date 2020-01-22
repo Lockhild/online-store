@@ -1,24 +1,30 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import './navbar.scss';
 
-function Navigation() {
+function Navbar() {
     return (
-        < Navbar bg="light" expand="lg" >
-            <Navbar.Brand href="/">UNIC</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                    <Nav.Link href="/hats">Hats</Nav.Link>
-                    <Nav.Link href="/jackets">Jackets</Nav.Link>
-                    <Nav.Link href="/sneakers">Sneakers</Nav.Link>
-                    <Nav.Link href="/women">Women</Nav.Link>
-                    <Nav.Link href="/men">Men</Nav.Link>
-                    <Nav.Link href="/shop">Shop</Nav.Link>
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar >
+        <nav className="navbar-container uk-navbar-container">
+
+            <div className="uk-navbar-left">
+
+                <a className="uk-navbar-item uk-logo" href="/">UNIC</a>
+
+            </div>
+
+            <div className="uk-navbar-right">
+
+                <ul className="uk-navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/signin">Sign In</a></li>
+                </ul>
+
+            </div>
+
+        </nav>
     )
 
 }
 
-export default Navigation;
+export default Navbar;

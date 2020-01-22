@@ -11,12 +11,9 @@ function CollectionRow({ title, products }) {
             <div className="product-previews">
                 {
                     // showing only the first 4 products
-                    products.slice(0, 4).map((product, index) => {
-                        console.log(product.imageUrl)
-                        return (
-                            <ProductPreview key={index} imageUrl={product.imageUrl} name={product.name} price={product.price} />
-                        )
-                    })
+                    products.slice(1, 5).map((product, index) =>
+                        <ProductPreview key={index} imageUrl={product.imageUrl} name={product.name} price={product.price} />
+                    )
                 }
             </div>
         </div>

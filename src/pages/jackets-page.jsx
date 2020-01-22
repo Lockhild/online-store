@@ -1,10 +1,8 @@
 import React from 'react';
-import Navigation from '../components/navbar/navbar.jsx';
 
 function JacketsPage() {
     return (
         <div>
-            <Navigation />
             <div className="uk-container">
                 <h1>Jackets Page</h1>
             </div>
