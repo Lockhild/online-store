@@ -2,6 +2,8 @@ import React from 'react';
 import Input from './components/input.jsx';
 import Button from './components/button.jsx';
 
+import { signInWithGoogle } from '../../firebase/firebase.utils.js';
+
 class LogIn extends React.Component {
     constructor() {
         super();
@@ -9,8 +11,9 @@ class LogIn extends React.Component {
         this.state = {};
     }
 
-    handleSubmit(event) {
-        event.preventDefault();
+    handleSubmit(e) {
+        e.preventDefault();
+        console.log('supp?');
     }
 
     render() {
@@ -21,6 +24,11 @@ class LogIn extends React.Component {
                     <Input label='Email' type='email' icon='mail' />
                     <Input label='Password' type='password' icon='lock' />
                     <Button text='Log In' classList='uk-button-primary' />
+                    <Button
+                        clicked={signInWithGoogle}
+                        text='Log In with Google'
+                        classList='uk-button-secondary'
+                    />
                 </form>
             </div>
         );

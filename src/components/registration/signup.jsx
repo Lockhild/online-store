@@ -22,7 +22,7 @@ class SignUp extends React.Component {
                     <Input label='Username' type='text' icon='user' />
                     <Input label='Email' type='email' icon='mail' />
                     <Input label='Password' type='password' icon='lock' />
-                    <Button text='Register' classList='uk-button-primary' />
+                    <Button text='Register' classList='uk-button-secondary' />
                 </form>
             </div>
         );
