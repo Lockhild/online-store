@@ -1,0 +1,11 @@
+.registration-page {
+    padding-top: 50px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+
+    .registration-container {
+        width: 400px;
+    }
+}

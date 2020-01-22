@@ -1,24 +1,31 @@
 import React from 'react';
-import SignIn from '../components/registration/sign-in.jsx';
+import LogIn from '../components/registration/login.jsx';
+import SignUp from '../components/registration/signup.jsx';
+
+import './pages.scss';
 
 function RegistrationPage() {
     return (
-        <div className='registration-container'>
-            <ul className='uk-tab' data-uk-tab="{connect:'#registration'}">
-                <li className='uk-active'>
-                    <a href='#'>Sign In</a>
-                </li>
-                <li>
-                    <a href='#'>Sign Up</a>
-                </li>
-            </ul>
-            <ul id='registration' className='uk-switcher uk-margin'>
-                <li>
-                    <a href='#' data-uk-switcher-item='next'></a>
-                    <SignIn />
-                </li>
-                <li>Content 2</li>
-            </ul>
+        <div className='registration-page'>
+            <div className='registration-container'>
+                <ul className='uk-tab' data-uk-tab="{connect:'#registration'}">
+                    <li className='uk-active'>
+                        <a href='#'>Log In</a>
+                    </li>
+                    <li>
+                        <a href='#'>Register</a>
+                    </li>
+                </ul>
+                <ul id='registration' className='uk-switcher uk-margin'>
+                    <li>
+                        {/* <a href='#' data-uk-switcher-item='next'></a> */}
+                        <LogIn />
+                    </li>
+                    <li>
+                        <SignUp />
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 }
