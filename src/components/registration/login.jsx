@@ -1,47 +1,30 @@
 import React from 'react';
+import Input from './components/input.jsx';
+import Button from './components/button.jsx';
 
-function LogIn() {
-    return (
-        <div>
-            <form className='uk-form-stacked'>
-                <legend className='uk-legend'>Log in</legend>
-                <div className='uk-margin'>
-                    <label
-                        className='uk-form-label'
-                        htmlFor='form-stacked-text'>
-                        Email
-                    </label>
-                    <div className='uk-form-controls'>
-                        <div className='uk-position-relative'>
-                            <span
-                                className='uk-form-icon'
-                                uk-icon='icon: mail'></span>
-                            <input className='uk-input' type='text' />
-                        </div>
-                    </div>
-                </div>
+class LogIn extends React.Component {
+    constructor() {
+        super();
 
-                <div className='uk-margin'>
-                    <label
-                        className='uk-form-label'
-                        htmlFor='form-stacked-text'>
-                        Password
-                    </label>
-                    <div className='uk-form-controls'>
-                        <div className='uk-position-relative'>
-                            <span
-                                className='uk-form-icon'
-                                uk-icon='icon: lock'></span>
-                            <input className='uk-input' type='password' />
-                        </div>
-                    </div>
-                </div>
-                <button class='uk-button uk-button-primary uk-width-1-1 uk-margin-small-top'>
-                    Log in
-                </button>
-            </form>
-        </div>
-    );
+        this.state = {};
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+    }
+
+    render() {
+        return (
+            <div>
+                <form className='uk-form-stacked' onSubmit={this.handleSubmit}>
+                    <legend className='uk-legend'>Log in</legend>
+                    <Input label='Email' type='email' icon='mail' />
+                    <Input label='Password' type='password' icon='lock' />
+                    <Button text='Log In' classList='uk-button-primary' />
+                </form>
+            </div>
+        );
+    }
 }
 
 export default LogIn;

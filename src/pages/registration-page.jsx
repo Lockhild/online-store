@@ -18,7 +18,6 @@ function RegistrationPage() {
                 </ul>
                 <ul id='registration' className='uk-switcher uk-margin'>
                     <li>
-                        {/* <a href='#' data-uk-switcher-item='next'></a> */}
                         <LogIn />
                     </li>
                     <li>
