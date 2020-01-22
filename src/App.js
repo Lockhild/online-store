@@ -11,6 +11,8 @@ import WomenPage from './pages/women-page.jsx';
 import MenPage from './pages/men-page.jsx';
 import ShopPage from './pages/shop-page.jsx';
 
+import RegistrationPage from './pages/registration-page.jsx';
+
 function App() {
   return (
     <div>
@@ -23,6 +25,7 @@ function App() {
         <Route exact path='/women' component={WomenPage} />
         <Route exact path='/men' component={MenPage} />
         <Route exact path='/shop' component={ShopPage} />
+        <Route exact path='/register' component={RegistrationPage} />
       </Switch>
     </div>
   );

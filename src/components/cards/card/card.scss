@@ -13,6 +13,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
+        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-align: center;
         text-transform: uppercase;
@@ -28,10 +29,12 @@
         .text {
             font-size: 1.5em;
             font-weight: 600;
-            transition: all .3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
 
             &:hover {
                 cursor: pointer;
+                -webkit-transform: scale(1.1);
                 transform: scale(1.1);
             }
         }
