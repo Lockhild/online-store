@@ -2,26 +2,81 @@ import React from 'react';
 import Input from './components/input.jsx';
 import Button from './components/button.jsx';
 
+import { auth } from '../../firebase/firebase.utils';
+
 class SignUp extends React.Component {
     constructor() {
         super();
 
-        this.state = {};
+        this.state = {
+            username: '',
+            email: '',
+            password: ''
+        };
     }
 
-    handleSubmit(event) {
-        event.preventDefault();
-        console.log('suppp??');
-    }
+    handleSubmit = e => {
+        e.preventDefault();
+
+        let email = this.state.email;
+        let password = this.state.password;
+
+        auth.createUserWithEmailAndPassword(email, password).catch(function(
+            error
+        ) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorCode);
+            console.log(errorMessage);
+            // ...
+        });
+    };
+
+    getUsername = e => {
+        e.persist();
+        this.setState({
+            username: e.target.value
+        });
+    };
+
+    getEmail = e => {
+        e.persist();
+        this.setState({
+            email: e.target.value
+        });
+    };
+
+    getPassword = e => {
+        e.persist();
+        this.setState({
+            password: e.target.value
+        });
+    };
 
     render() {
         return (
             <div>
                 <h3>Create new account</h3>
                 <form className='uk-form-stacked' onSubmit={this.handleSubmit}>
-                    <Input label='Username' type='text' icon='user' />
-                    <Input label='Email' type='email' icon='mail' />
-                    <Input label='Password' type='password' icon='lock' />
+                    <Input
+                        onValueChange={this.getUsername}
+                        label='Username'
+                        type='text'
+                        icon='user'
+                    />
+                    <Input
+                        onValueChange={this.getEmail}
+                        label='Email'
+                        type='email'
+                        icon='mail'
+                    />
+                    <Input
+                        onValueChange={this.getPassword}
+                        label='Password'
+                        type='password'
+                        icon='lock'
+                    />
                     <Button text='Register' classList='uk-button-secondary' />
                 </form>
             </div>

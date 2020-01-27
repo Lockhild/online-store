@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Input({ label, type, icon }) {
+function Input({ onValueChange, label, type, icon }) {
     return (
         <div className='uk-margin'>
             {/* if label is provided */}
@@ -14,7 +14,11 @@ function Input({ label, type, icon }) {
                     <span
                         className='uk-form-icon'
                         uk-icon={icon ? 'icon: ' + icon : null}></span>
-                    <input className='uk-input' type={type ? type : 'text'} />
+                    <input
+                        onChange={onValueChange}
+                        className='uk-input'
+                        type={type ? type : 'text'}
+                    />
                 </div>
             </div>
         </div>
