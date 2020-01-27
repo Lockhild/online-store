@@ -2,7 +2,7 @@ import React from 'react';
 import Input from './components/input.jsx';
 import Button from './components/button.jsx';
 
-import { signInWithGoogle } from '../../firebase/firebase.utils.js';
+import { signInWithGoogle, auth } from '../../firebase/firebase.utils.js';
 
 class LogIn extends React.Component {
     constructor() {
@@ -16,7 +16,15 @@ class LogIn extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        console.log(this.state);
+
+        let email = this.state.email;
+        let password = this.state.password;
+
+        auth.signInWithEmailAndPassword(email, password).catch(function(error) {
+            console.error(
+                `oops...I did it again -> ${error.code}: ${error.message}`
+            );
+        });
     };
 
     getEmail = e => {
