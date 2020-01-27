@@ -23,14 +23,18 @@
 
         .title {
             font-size: 2.2em;
-            font-weight: 600;
+            font-weight: 900;
             margin: 0;
+            text-transform: uppercase;
+            font-family: inherit;
         }
         .text {
             font-size: 1.5em;
             font-weight: 600;
             -webkit-transition: all 0.3s;
             transition: all 0.3s;
+            text-transform: uppercase;
+            font-family: inherit;
 
             &:hover {
                 cursor: pointer;
