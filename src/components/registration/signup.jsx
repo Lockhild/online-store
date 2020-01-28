@@ -28,6 +28,9 @@ class SignUp extends React.Component {
                 `oops...I did it again -> ${error.code}: ${error.message}`
             );
         });
+        // reset the form
+        let form = document.getElementById('signup-form');
+        form.reset();
     };
 
     getUsername = e => {
@@ -55,7 +58,10 @@ class SignUp extends React.Component {
         return (
             <div>
                 <h3>Create new account</h3>
-                <form className='uk-form-stacked' onSubmit={this.handleSubmit}>
+                <form
+                    id='signup-form'
+                    className='uk-form-stacked'
+                    onSubmit={this.handleSubmit}>
                     <Input
                         onValueChange={this.getUsername}
                         label='Username'

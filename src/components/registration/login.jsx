@@ -20,11 +20,17 @@ class LogIn extends React.Component {
         let email = this.state.email;
         let password = this.state.password;
 
-        auth.signInWithEmailAndPassword(email, password).catch(function(error) {
-            console.error(
-                `oops...I did it again -> ${error.code}: ${error.message}`
-            );
-        });
+        auth.signInWithEmailAndPassword(email, password)
+            .then(() => {
+                // resetting the form
+                let form = document.getElementById('login-form');
+                console.log('User logged in successfully!');
+            })
+            .catch(function(error) {
+                console.error(
+                    `oops...an error occured -> ${error.code}: ${error.message}`
+                );
+            });
     };
 
     getEmail = e => {
@@ -45,7 +51,10 @@ class LogIn extends React.Component {
         return (
             <div>
                 <h3>Log into your account</h3>
-                <form className='uk-form-stacked' onSubmit={this.handleSubmit}>
+                <form
+                    id='login-form'
+                    className='uk-form-stacked'
+                    onSubmit={this.handleSubmit}>
                     <Input
                         onValueChange={this.getEmail}
                         label='Email'
